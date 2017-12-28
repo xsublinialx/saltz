@@ -1,39 +1,51 @@
+
 # Program Made To Generate Secure Password Phrases
-# Notes: To fix the user directory issue just ask the user for their name and then store the input into a variable
 
 import random
 from time import sleep
 import os
 import sys
+import getpass
 
-os.system('cd passgen')
+os.system('clear')
 
-if os.path.exists("/home/nax/passgen") == True:
-    os.system('cd passgen')
-if os.path.exists("/home/nax/passgen") == False:
+get_login = getpass.getuser()
+get_dir = os.getcwd()
+
+if os.path.exists("/home/" + get_login + "/saltz") == True:
+    os.chdir('saltz/splash')
+if os.path.exists("/home/" + get_login + "/saltz") == False:
+    sleep(1)
     print("Error finding directory.")
+    sleep(3)
     print("Quitting program...")
     sleep(3)
-    sys.exit("Please make sure that the passgen folder is inside your Home directory.")
+    sys.exit("Please make sure that the saltz folder is inside your Home directory.")
 
-def splash():
-    os.system('cat passgensplashscreen.txt')
+ransplash = random.choice(os.listdir("/home/" + get_login + "/saltz/splash/"))
 
-splash()
+if ransplash == 'splash1':
+    os.system('cat splash1')
+
+if ransplash == 'splash2':
+    os.system('cat splash2')
+
+if ransplash == 'splash3':
+    os.system('cat splash3')
 
 sleep(2)
 
 alphabet = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#&*^!%$~"
-pw_length = 0 # set this value to how long you want your password to be; do not set to anything over 71 characters
+pw_length = 0
 mypw = ""
 
 while True:
-    try:
+    try: 
         pw_length_ask = int(raw_input("How long would you like your password to be? "))
         final_pw_length = pw_length + int(pw_length_ask)
         print("Pass length set to " + str(final_pw_length) + ".")
         break
-    except ValueError:
+    except ValueError: 
         print("You must enter a number.")
 
 for i in range(final_pw_length):
@@ -45,18 +57,18 @@ line = "Your password for " + passtype + " is : " + mypw
 print line
 
 writeyn = raw_input("Would you like to write your password to a text file? Y/n ")
-writeyn = writeyn.strip() # makes sure that no white space is around
+writeyn = writeyn.strip()
 
 if writeyn == 'Y':
     print('Written to passwords.txt')
     f = open("passwords.txt", "a+") # "append"
-    f.write(passtype + " - " + mypw)
+    f.write("\n" + passtype + " - " + mypw)
 
 if writeyn == 'n':
     print('Writting Stopped.')
 
 while writeyn != 'n' and writeyn != 'Y':
-    writeyn = raw_input("You must enter Y or n " + "\nWould you like to write your password to a text file? Y/n")
+    writeyn = raw_input("You must enter Y or n " + "\nWould you like to write your password to a text file? Y/n ")
     writeyn = writeyn.strip()
     if writeyn == 'n' or writeyn == 'N' or writeyn == 'no' or writeyn == 'No':
         print 'Writing Stopped.'
