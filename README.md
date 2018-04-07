@@ -1,6 +1,6 @@
 # About Saltz
 
-Saltz is an Open Source password generator for Linux. It provides secure passwords for any service you use. As of now the software is in alpha. This software is not complete, any feautures that are in the program now may be deleted or updated. New features are constant.
+Saltz is an Open Source password generator for Linux. It provides secure passwords for any service you use. As of now the software is in alpha. This software is not complete, any feautures that are in the program now may be removed or updated. New features are constant.
 
 ## Getting Started
 
