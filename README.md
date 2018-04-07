@@ -21,7 +21,7 @@ wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
 
 ### Download and Set Up 
 
-First navigate to the releases tab of the home page. Choose the release of your choice. Because v1.3.0-alpha is the latest version as of the writing of this tutorial I'll reccomend that you download this version. 
+First navigate to the releases tab of the home page. Choose the release of your choice. I highly reccomend that you choose the newest release if it is in relation to bug fixes, older versions may be unstable.
 
 Open and extract the zip or tar file to the user home directory. Make sure that you are in the directory in which you downloaded the file from so you can extract it. 
 
