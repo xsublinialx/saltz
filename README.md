@@ -35,7 +35,7 @@ For the tar file
 ```
 tar xvzf Saltz-1.1.0-alpha.tar.gz "/home/YOUR USERNAME/"
 ```
-Now go inside of the folder you extracted into your user directory. Highlight the saltz.py file and copy and paste it outside of the folder into your user directory.
+Now go inside of the folder you extracted into your user directory. Highlight the saltz.py file and copy and paste it outside of the folder into your user directory. After doing so, rename the folder to ``saltz``.
 
 You will need to set execute permissions for the program so it can run on your computer do this by running chmod in a terminal window.
 ```
