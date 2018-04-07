@@ -1,4 +1,3 @@
-
 # Program Made To Generate Secure Password Phrases
 
 import random
@@ -12,9 +11,9 @@ os.system('clear')
 get_login = getpass.getuser()
 get_dir = os.getcwd()
 
-if os.path.exists("/home/" + get_login + "/saltz") == True:
-    os.chdir('saltz/splash')
-if os.path.exists("/home/" + get_login + "/saltz") == False:
+if os.path.exists("/home/' + get_login + '/saltz/saltz/splash") == True:
+    os.chdir('/home/' + get_login + '/saltz/saltz/splash')
+if os.path.exists("/home/' + get_login + '/saltz/saltz/splash") == False:
     sleep(1)
     print("Error finding directory.")
     sleep(3)
@@ -22,7 +21,7 @@ if os.path.exists("/home/" + get_login + "/saltz") == False:
     sleep(3)
     sys.exit("Please make sure that the saltz folder is inside your Home directory.")
 
-ransplash = random.choice(os.listdir("/home/" + get_login + "/saltz/splash/"))
+ransplash = random.choice(os.listdir("/home/' + get_login + '/saltz/saltz/splash"))
 
 if ransplash == 'splash1':
     os.system('cat splash1')
@@ -40,12 +39,12 @@ pw_length = 0
 mypw = ""
 
 while True:
-    try: 
+    try:
         pw_length_ask = int(raw_input("How long would you like your password to be? "))
         final_pw_length = pw_length + int(pw_length_ask)
         print("Pass length set to " + str(final_pw_length) + ".")
         break
-    except ValueError: 
+    except ValueError:
         print("You must enter a number.")
 
 for i in range(final_pw_length):
