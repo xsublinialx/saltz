@@ -27,13 +27,13 @@ Open and extract the zip or tar file to the user home directory. Make sure that 
 
 For the zip file
 ``` 
-unzip Saltz-1.1.0-alpha.zip "/home/YOUR USERNAME/"
+unzip saltz-1.0.2-alpha.zip "/home/YOUR USERNAME/"
 ```
 or
 
 For the tar file
 ```
-tar xvzf Saltz-1.1.0-alpha.tar.gz "/home/YOUR USERNAME/"
+tar xvzf saltz-1.0.2-alpha.tar.gz "/home/YOUR USERNAME/"
 ```
 Now go inside of the folder you extracted into your user directory. Highlight the saltz.py file and copy and paste it outside of the folder into your user directory. After doing so, rename the folder to ``saltz``.
 
