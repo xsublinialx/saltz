@@ -1,9 +1,13 @@
 # saltz installer
 
-import os 
+import os
+import sys
+import getpass
 from time import sleep
 from termcolor import colored, import cprint
 
+get_login = getpass.getuser()
+get_dir = os.getcwd()
 greenY = colored("Y")
 redN = colored("n ")
 
