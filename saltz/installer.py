@@ -17,6 +17,7 @@ askInstall = raw_input(finalAreColor)
 
 if askInstall == "Y" or "y":
 	print("Starting install...")
+	newRelease = raw_input("Would you like to install a new release or use a downloaded release? D: Download N: New Release ")
 	sleep(2)
 	os.chdir("~" + get_login)
 	os.system("unzip saltz-1.0.2-alpha.zip")
