@@ -18,6 +18,8 @@ askInstall = raw_input(finalAreColor)
 if askInstall == "Y" or "y":
 	print("Starting install...")
 	sleep(2)
+	os.chdir("~" + get_login)
+	os.system("unzip saltz-1.0.2-alpha.zip")
 if askInstall.upper == "n" or "N":
 	print("Stopping Install...")
 	
